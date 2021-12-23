@@ -1,5 +1,10 @@
 resource "aws_instance" "web_host" {
-  # ec2 have plain text secrets in user data
+  ebs_optimized = true
+  monitoring = true
+  *_block_device {
+    encrypted = true
+  }
+  # ec2 have plain text secrets in user data by JLLLLLLLLLLLLLLL
   ami           = "${var.ami}"
   instance_type = "t2.nano"
 
