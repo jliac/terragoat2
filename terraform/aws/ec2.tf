@@ -1,4 +1,5 @@
 resource "aws_instance" "web_host" {
+  monitoring = true
   *_block_device {
     encrypted = true
   }
