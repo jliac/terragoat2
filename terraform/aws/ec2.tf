@@ -4,7 +4,7 @@ resource "aws_instance" "web_host" {
   *_block_device {
     encrypted = true
   }
-  # ec2 have plain text secrets in user data by JLLLLLLLLLLLLLLL
+  # ec2 have plain text secrets in user data by IIIIIIIIIII
   ami           = "${var.ami}"
   instance_type = "t2.nano"
 
